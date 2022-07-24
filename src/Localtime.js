@@ -17,7 +17,7 @@ export default function Localtime(props) {
     hours = `0${hours}`;
   }
   if (minutes < 10) {
-    minutes = `0{minutes}`;
+    minutes = `0${minutes}`;
   }
   return (
     <div className="local-time">
