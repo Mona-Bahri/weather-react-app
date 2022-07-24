@@ -4,7 +4,6 @@ import Localtime from "./Localtime";
 
 export default function Cityforcast(props) {
   const [forcastData, setForcastData] = useState({ ready: false });
-
   function fetchData(response) {
     setForcastData({
       ready: true,
@@ -71,7 +70,7 @@ export default function Cityforcast(props) {
       </div>
     );
   } else {
-    const apiKey = "f689afd608a64a3da1aad63660857454";
+    let apiKey = "f689afd608a64a3da1aad63660857454";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(fetchData);
     return "Loading...";

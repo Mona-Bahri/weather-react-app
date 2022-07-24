@@ -13,10 +13,10 @@ export default function Localtime(props) {
   let day = days[props.date.getDay()];
   let hours = props.date.getHours();
   let minutes = props.date.getMinutes();
-  if (hours < 0) {
+  if (hours < 10) {
     hours = `0${hours}`;
   }
-  if (minutes < 0) {
+  if (minutes < 10) {
     minutes = `0{minutes}`;
   }
   return (
