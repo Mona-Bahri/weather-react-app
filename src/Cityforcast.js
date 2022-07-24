@@ -6,8 +6,8 @@ import Weatherinfo from "./Weatherinfo";
 export default function Cityforcast(props) {
   const [forcastData, setForcastData] = useState({ ready: false });
   const [city, setCity] = useState(props.city);
+
   function fetchData(response) {
-    console.log();
     setForcastData({
       ready: true,
       temp: response.data.main.temp,
