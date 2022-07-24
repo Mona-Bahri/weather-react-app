@@ -1,4 +1,5 @@
 import React from "react";
+import Weathericon from "./Weathericon";
 
 export default function Weatherinfo(props) {
   return (
@@ -7,7 +8,7 @@ export default function Weatherinfo(props) {
         {props.data.cityName}
       </div>
       <div className="weather-icon">
-        <img src="#" alt="Weather icon" />
+        <Weathericon code={props.data.icon} />
       </div>
       <div className="de-wrapper">
         <div id="temperature">
