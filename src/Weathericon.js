@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { IconContext } from "react-icons";
 import { WiDaySunny } from "react-icons/wi";
 import { WiNightClear } from "react-icons/wi";
@@ -38,7 +39,7 @@ export default function Weathericon(props) {
     "50n": <WiNightFog />,
   };
   return (
-    <IconContext.Provider value={{ size: "5em", color: "white" }}>
+    <IconContext.Provider value={{ className: "weather-icon", color: "white" }}>
       <p>{iconMapping[props.code]}</p>
     </IconContext.Provider>
   );

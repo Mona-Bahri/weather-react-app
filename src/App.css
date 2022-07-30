@@ -3,12 +3,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+.weather-icon {
+  font-size: 3em;
+}
 .App {
   overflow: hidden;
   padding: 0;
   background-image: url("./header-background.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 150vh;
   background-position: center;
 }
 .git-link {

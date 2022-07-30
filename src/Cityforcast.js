@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Localtime from "./Localtime";
 import Weatherinfo from "./Weatherinfo";
+import WeekdaysForcast from "./WeekdaysForcast";
 
 export default function Cityforcast(props) {
   const [forcastData, setForcastData] = useState({ ready: false });
@@ -9,6 +10,7 @@ export default function Cityforcast(props) {
 
   function fetchData(response) {
     setForcastData({
+      coordinates: response.data.coord,
       ready: true,
       temp: response.data.main.temp,
       windSpeed: response.data.wind.speed,
@@ -20,7 +22,7 @@ export default function Cityforcast(props) {
     });
   }
   function search() {
-    let apiKey = "f689afd608a64a3da1aad63660857454";
+    let apiKey = "2d0271702a5c12ccb610ae9f48878fd2";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(fetchData);
   }
@@ -65,6 +67,7 @@ export default function Cityforcast(props) {
           </form>
         </div>
         <Weatherinfo data={forcastData} />
+        <WeekdaysForcast data={forcastData} />
       </div>
     );
   } else {

@@ -1,6 +1,5 @@
 import "./App.css";
 import Cityforcast from "./Cityforcast";
-import Weekdays from "./Weekdays";
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
@@ -8,20 +7,7 @@ function App() {
     <div className="App container-fluid p-0 ">
       <div className="header">
         <Cityforcast city="Edinburgh" />
-        <div className="row">
-          <div className="col-3">
-            <Weekdays />
-          </div>
-          <div className="col-3">
-            <Weekdays />
-          </div>
-          <div className="col-3">
-            <Weekdays />
-          </div>
-          <div className="col-3">
-            <Weekdays />
-          </div>
-        </div>
+
         <div className="mt-4 git-link ">
           <a
             href="https://github.com/Mona-Bahri/weather-react"
