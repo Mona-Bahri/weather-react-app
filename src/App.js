@@ -1,14 +1,18 @@
 import "./App.css";
 import Cityforcast from "./Cityforcast";
 import "bootstrap/dist/css/bootstrap.css";
+import background from "./header-background.jpg";
 
 function App() {
   return (
-    <div className="App container-fluid p-0 ">
+    <div
+      className="App container-fluid  "
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <div className="header">
         <Cityforcast city="Edinburgh" />
 
-        <div className="mt-4 git-link ">
+        <div className="mt-4  git-link ">
           <a
             href="https://github.com/Mona-Bahri/weather-react"
             target={"_blank"}
