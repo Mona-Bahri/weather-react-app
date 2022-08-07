@@ -142,4 +142,7 @@
   .local-time {
     font-size: 15px;
   }
+  .de-wrapper {
+    justify-content: space-between;
+  }
 }
