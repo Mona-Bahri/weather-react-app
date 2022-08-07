@@ -25,7 +25,7 @@ export default function Forcastdata(props) {
         <div className="days-weather-icon">
           <Weathericon code={props.data.weather[0].icon} />
         </div>
-        <div className="max-min">
+        <div className="max-min mb-2">
           <span className="max-temp">{maxTemperature()}</span> |
           <span className="min-temp">{minTemperature()}</span>
         </div>
